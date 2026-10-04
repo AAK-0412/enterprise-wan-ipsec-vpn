@@ -116,7 +116,7 @@ The capture also shows the three-message Quick Mode exchange used to establish t
 ### Encrypted ESP Traffic
 After the IPsec security associations were established, all protected traffic was carried using encrypted ESP packets.
 
-![ESP Traffic](screenshots/esp-traffic.png)
+![ESP Traffic](screenshots/vpn-encrypted-traffic.png)
 
 ### IPsec Verification
 The IPsec security association was verified on R1 and R3 using Cisco IOS commands.
@@ -129,9 +129,8 @@ Key verification attributes confirmed:
 - **Transform Set:** ESP-AES, ESP-SHA-HMAC
 - **Errors:** Zero send/receive errors
 
-![IPsec Verification 1](screenshots/ipsec-verify-1.png)
+![IPsec Verification ](screenshots/ipsec-verification.png)
 
-![IPsec Verification 2](screenshots/ipsec-verify-2.png)
 
 ---
 
@@ -142,9 +141,9 @@ Configurations were applied on both endpoint routers to define traffic to protec
 - **R1 Configuration:** Defined match ACL for `10.10.10.0/24` to `10.20.20.0/24` set to peer `10.0.0.6`.
 - **R3 Configuration:** Defined match ACL for `10.20.20.0/24` to `10.10.10.0/24` set to peer `10.0.0.1`.
 
-![R1 Crypto Map](screenshots/r1-crypto-map.png)
+![R1 Crypto Map](screenshots/crypto-map-r1.png)
 
-![R3 Crypto Map](screenshots/r3-crypto-map.png)
+![R3 Crypto Map](screenshots/crypto-map-r3.png)
 
 ---
 
